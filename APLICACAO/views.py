@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from .models import *
 from django.views.decorators.csrf import csrf_exempt
 
+
+
 def mostrarPokemons(request):
     pokemons = Pokemon.objects.all()
 
