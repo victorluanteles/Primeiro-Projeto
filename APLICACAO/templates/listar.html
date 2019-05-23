@@ -16,7 +16,8 @@
         {% for objeto in todos_pokemons %}
             <tr scope="row">
                 <td><img src={{ objeto.imagem.url }} width="200" height="200" > </td>
-                <td>{{ objeto.id }}</td>
+                <td><a href="{% url 'pokedex:um_pokemon' idpokemon=objeto.id %}">
+                    {{ objeto.id }} </a> </td>
                 <td>{{ objeto.nome }}</td>
                 <td>{{ objeto.altura }}</td>
                 <td>{{ objeto.velocidade }}</td>
