@@ -22,8 +22,9 @@ class Pokemon(models.Model):
     ponto_saude = models.PositiveIntegerField()
     ataque = models.PositiveIntegerField()
     defesa = models.PositiveIntegerField()
-    ataque_especial = models.CharField(max_length=50)
-    defesa_especial = models.CharField(max_length=50)
+    habilidades = models.CharField(max_length=50)
+    movimentos = models.CharField(max_length=50)
     velocidade = models.PositiveIntegerField()
+    experiencia = models.PositiveIntegerField()
     def __str__(self):
         return self.nome

@@ -10,6 +10,7 @@
             <th>Velocidade</th>
             <th>Categoria</th>
             <th> Ataque</th>
+            <th> Habilidade</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
                 <td>{{ objeto.velocidade }}</td>
                 <td>{{ objeto.fk_categoria.nome }}</td>
                 <td> {{ objeto.ataque }}</td>
+                <td> {{objeto.habilidades}}</td>
 
             </tr>
         {% endfor %}
