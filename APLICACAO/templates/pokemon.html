@@ -1,15 +1,25 @@
 {% extends "base.html" %}
 {% block conteudo %}
-    <div class="card" style="width: 18rem;">
+    <div  class="card text-center  " style="width: 18rem;"  >
+
         <img src="{{ pokemon.imagem.url }}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{ pokemon.nome }}</h5>
-            <p class="card-text">{{ pokemon.fk_categoria.nome }}</p>
-            <p class="card-text"> {{ pokemon.altura }}</p>
-            <p class="card-text">{{ pokemon.velocidade }}</p>
+            <ul class="list-group list-group-flush">
+            <h5 class="card-title text-left"><b>{{ pokemon.nome }}</b></h5>
+
+                <li class="list-group-item"> <b><i>Categoria:</i> </b>{{ pokemon.fk_categoria.nome }}</li>
+                <li class="list-group-item"> <b><i>Altura: </i></b> {{ pokemon.altura }}</li>
+                <li class="list-group-item"><b><i>Velocidade: </i></b>{{ pokemon.velocidade }}</li>
+                <li class="list-group-item"><b><i>Habilidades: </i></b>{{pokemon.habilidades}} </li>
+                <li class="list-group-item"><b><i>Experiência:</i> </b>{{pokemon.experiencia}} </li>
+                <li class="list-group-item"><b><i>Peso:</i> </b>{{pokemon.peso}} </li>
+
+
+             </ul>
         </div>
-    </div>
-    <a href="{% url 'pokedex:listar_pokemons' %}">
-        <button>Voltar</button>
+        <a href="{% url 'pokedex:listar_pokemons' %}" class="btn btn-primary" >
+        Voltar
     </a>
+    </div>
+
 {% endblock %}

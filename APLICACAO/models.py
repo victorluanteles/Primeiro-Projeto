@@ -26,5 +26,8 @@ class Pokemon(models.Model):
     movimentos = models.CharField(max_length=50)
     velocidade = models.PositiveIntegerField()
     experiencia = models.PositiveIntegerField()
+    peso = models.FloatField()
+
+
     def __str__(self):
         return self.nome
