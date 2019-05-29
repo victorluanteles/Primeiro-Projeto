@@ -1,33 +1,16 @@
 {% extends "base.html" %}
 {% block conteudo %}
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>Foto</th>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Altura</th>
-            <th>Velocidade</th>
-            <th>Categoria</th>
-            <th> Ataque</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        {% for objeto in todos_pokemons %}
-            <tr scope="row">
-                <td><a href="{% url 'pokedex:um_pokemon' idpokemon=objeto.id %}">
-                <img src={{ objeto.imagem.url }} width="200" height="200" > </a> </td>
-                <td>  {{ objeto.id }} </td>
-                <td>{{ objeto.nome }}</td>
-                <td>{{ objeto.altura }}</td>
-                <td>{{ objeto.velocidade }}</td>
-                <td>{{ objeto.fk_categoria.nome }}</td>
-                <td> {{ objeto.ataque }}</td>
-
-
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<div class="row">
+    {% for objeto in todos_pokemons %}
+    <div class="col-md-4">
+        <div class="card">
+            <a href="{% url 'pokedex:um_pokemon' idpokemon=objeto.id %}">
+                <img src={{ objeto.imagem.url }} width="200" class="card-img-top" height="200"> </a>
+            <div class="card-body">
+                <h5 class="card-title">{{objeto.nome}}</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
