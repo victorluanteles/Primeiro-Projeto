@@ -3,11 +3,12 @@
 <div class="row">
 {% for objeto in todos_pokemons %}
 <div class="col-md-4">
-    <div class="card text-white bg-primary mb-3">
+    <div class="card text-black bg-dark mb-3">
         <a href="{% url 'pokedex:um_pokemon' idpokemon=objeto.id %}">
-            <img src={{ objeto.imagem.url }} width="200" class="card-img-top" height="200"> </a>
-        <div class="card-body">
-            <h5 class="card-title">{{objeto.nome}}</h5>
+            <img src={{ objeto.imagem.url }} width="100" class="card-img-top  " height="100"> </a>
+        <div class="card-body bg-primary   ">
+            <h3 class="card-title text-white "><b>{{objeto.nome}}</b>
+            </h3>
         </div>
     </div>
 </div>

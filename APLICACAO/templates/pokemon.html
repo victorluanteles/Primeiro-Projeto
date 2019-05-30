@@ -1,25 +1,26 @@
 {% extends "base.html" %}
 {% block conteudo %}
-    <div  class="card text-center  " style="width: 18rem;"  >
 
-        <img src="{{ pokemon.imagem.url }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-            <h5 class="card-title text-center"><b>{{ pokemon.nome }}</b></h5>
+    <div  class="card text-center mx-auto border-dark " style="width: 18rem;"  >
 
-                <li class="list-group-item"> <b><i>Categoria:</i> </b>{{ pokemon.fk_categoria.nome }}</li>
-                <li class="list-group-item"> <b><i>Altura: </i></b> {{ pokemon.altura }}</li>
-                <li class="list-group-item"><b><i>Velocidade: </i></b>{{ pokemon.velocidade }}</li>
-                <li class="list-group-item"><b><i>Habilidades: </i></b>{{pokemon.habilidades}} </li>
-                <li class="list-group-item"><b><i>Experiência:</i> </b>{{pokemon.experiencia}} </li>
-                <li class="list-group-item"><b><i>Peso:</i> </b>{{pokemon.peso}} </li>
+        <img src="{{ pokemon.imagem.url }}" class="card-img-top border-dark" alt="...">
+        <div class="card-body bg-primary text-white ">
+            <ul class="list-group list-group-flush bg-primary text-white ">
+            <h5 class="card-title text-white bg-primary mb-3 rounded  "><b>{{ pokemon.nome }}</b></h5>
 
-
-             </ul>
+                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light  "> <b><i>Categoria:</i> </b>{{ pokemon.fk_categoria.nome }}</li>
+                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light "> <b><i>Altura: </i></b> {{ pokemon.altura }}</li>
+                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light " ><b><i>Velocidade: </i></b>{{ pokemon.velocidade }}</li>
+                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light " ><b><i>Habilidades: </i></b>{{pokemon.habilidades}} </li>
+                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light "><b><i>Experiência:</i> </b>{{pokemon.experiencia}} </li>
+                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light "><b><i>Peso:</i> </b>{{pokemon.peso}} </li>
+            </ul>
         </div>
-        <a href="{% url 'pokedex:listar_pokemons' %}" class="btn btn-primary" >
+        <a href="{% url 'pokedex:listar_pokemons' %}" class="btn btn-primary border-light" >
         Voltar
     </a>
+
     </div>
+
 
 {% endblock %}
