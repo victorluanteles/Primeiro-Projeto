@@ -6,14 +6,14 @@
         <img src="{{ pokemon.imagem.url }}" class="card-img-top border-dark" alt="...">
         <div class="card-body bg-primary text-white ">
             <ul class="list-group list-group-flush bg-primary text-white ">
-            <h5 class="card-title text-white bg-primary mb-3 rounded  "><b>{{ pokemon.nome }}</b></h5>
+            <h5 class="card-title text-white bg-primary mb-3 rounded "><b>{{ pokemon.nome }}</b></h5>
 
-                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light  "> <b><i>Categoria:</i> </b>{{ pokemon.fk_categoria.nome }}</li>
-                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light "> <b><i>Altura: </i></b> {{ pokemon.altura }}</li>
-                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light " ><b><i>Velocidade: </i></b>{{ pokemon.velocidade }}</li>
-                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light " ><b><i>Habilidades: </i></b>{{pokemon.habilidades}} </li>
-                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light "><b><i>Experiência:</i> </b>{{pokemon.experiencia}} </li>
-                <li class="list-group-item card text-dark bg-primary mb-3 rounded border-light "><b><i>Peso:</i> </b>{{pokemon.peso}} </li>
+                <li class="list-group-item card text-dark bg-primary mb-2 rounded border-light  "> <b><i>Categoria:</i> </b>{{ pokemon.fk_categoria.nome }}</li>
+                <li class="list-group-item card text-dark bg-primary mb-2 rounded border-light "> <b><i>Altura: </i></b> {{ pokemon.altura }}</li>
+                <li class="list-group-item card text-dark bg-primary mb-2 rounded border-light " ><b><i>Velocidade: </i></b>{{ pokemon.velocidade }}</li>
+                <li class="list-group-item card text-dark bg-primary mb-2 rounded border-light " ><b><i>Habilidades: </i></b>{{pokemon.habilidades}} </li>
+                <li class="list-group-item card text-dark bg-primary mb-2 rounded border-light "><b><i>Experiência:</i> </b>{{pokemon.experiencia}} </li>
+                <li class="list-group-item card text-dark bg-primary mb-2 rounded border-light "><b><i>Peso:</i> </b>{{pokemon.peso}} </li>
             </ul>
         </div>
         <a href="{% url 'pokedex:listar_pokemons' %}" class="btn btn-primary border-light" >
