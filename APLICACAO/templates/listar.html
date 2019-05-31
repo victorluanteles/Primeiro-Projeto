@@ -1,19 +1,26 @@
 {% extends "base.html" %}
 {% block conteudo %}
 <div class="row">
-{% for objeto in todos_pokemons %}
+    {% for objeto in todos_pokemons %}
 
-    <div class="col-md-3">
-    <div class="card text-center bg-primary border-dark mb-3">
-         <h6 id="id" class="card-title text-white mb-0 "><b>{{objeto.nome}}</b>
-            </h6>
+    <div class="col-md-4">
+        <div class="flip-card mb-5 border-transparent">
+            <div class="flip-card-inner ">
+                <div class="flip-card-front ">
+                    <a href="{% url 'pokedex:um_pokemon' idpokemon=objeto.id %}">
+                        <img src={{ objeto.imagem.url }} width="200" class="card-img-top  " height="200 "> </a>
+                </div>
+                <div class="flip-card-back bg-transparent">
+                    <a href="{% url 'pokedex:um_pokemon' idpokemon=objeto.id %}">
+                        <img src={{ objeto.imagem1.url }} width="200" class="card-img-top  " height="200 ">
+                        <h5 class="card-title "><b>{{objeto.nome}}</b></h5>
+                    </a>
 
-        <a href="{% url 'pokedex:um_pokemon' idpokemon=objeto.id %}">
-            <img src={{ objeto.imagem.url }} width="100" class="card-img-top  " height="100"> </a>
-
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-{% endfor %}
+    {% endfor %}
 </div>
 {% endblock %}
